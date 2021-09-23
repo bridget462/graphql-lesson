@@ -28,12 +28,14 @@ client
   .query({
     query: gql`
       {
-        getCollectionsByTitle(title: "hats") {
+        collections {
           id
           title
           items {
             id
             name
+            price
+            imageUrl
           }
         }
       }
